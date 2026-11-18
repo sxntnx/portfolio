@@ -31,7 +31,7 @@ const og = `
     <text x="120" y="124" font-size="20" font-weight="600" fill="#5DE383">Open to remote junior roles</text>
 
     <text x="76" y="268" font-size="92" font-weight="700" letter-spacing="-3" fill="#EEF3F2">Santino Spelzini</text>
-    <text x="80" y="336" font-size="38" font-weight="600" fill="#5DE4CC">Data Analyst · Aspiring Data Engineer</text>
+    <text x="80" y="336" font-size="33" font-weight="600" fill="#5DE4CC">Industrial Engineer · Data Analyst · Aspiring Data Engineer</text>
     <text x="80" y="396" font-size="26" fill="#A0ADB1">SQL · Python ETL pipelines · Power BI dashboards</text>
   </g>
 

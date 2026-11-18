@@ -1,6 +1,6 @@
 import { m, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
 import { FileDown } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { Fragment, useEffect, useRef } from 'react'
 import { links } from '../data/content'
 import { useLang } from '../lib/i18n'
 import { EASE, asset, fadeUp, isFinePointer, stagger } from '../lib/motion'
@@ -175,7 +175,16 @@ export function Hero() {
           </h1>
 
           <m.p variants={fadeUp} className="mt-4 text-[19px] font-medium text-accent sm:text-[21px]">
-            {t.hero.role}
+            {/* Each title stays on one line; wrapping only happens after a "·" separator. */}
+            {t.hero.role.split(' · ').map((r, i, all) => (
+              <Fragment key={r}>
+                <span className="whitespace-nowrap">
+                  {r}
+                  {i < all.length - 1 && <span className="text-accent/50">&nbsp;·</span>}
+                </span>
+                {i < all.length - 1 && ' '}
+              </Fragment>
+            ))}
           </m.p>
 
           <m.p variants={fadeUp} className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-fg-muted sm:text-[17px]">

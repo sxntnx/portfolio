@@ -113,7 +113,7 @@ const en: Content = {
   hero: {
     badge: 'Open to remote junior roles',
     name: 'Santino Spelzini',
-    role: 'Data Analyst · Aspiring Data Engineer',
+    role: 'Industrial Engineer · Data Analyst · Aspiring Data Engineer',
     tagline:
       "I take data from raw source to decision — SQL, Python ETL pipelines and KPI dashboards, with an industrial engineer's business mindset.",
     ctaProjects: 'View projects',
@@ -293,7 +293,7 @@ const es: Content = {
   hero: {
     badge: 'Disponible para roles junior remotos',
     name: 'Santino Spelzini',
-    role: 'Data Analyst · Aspiring Data Engineer',
+    role: 'Ingeniero Industrial · Analista de Datos · Aspirante a Data Engineer',
     tagline:
       'Llevo el dato desde la fuente hasta la decisión — SQL, pipelines ETL en Python y tableros de KPIs, con la mirada de negocio de un ingeniero industrial.',
     ctaProjects: 'Ver proyectos',
