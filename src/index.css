@@ -1,0 +1,71 @@
+@import '@fontsource-variable/geist/index.css';
+@import '@fontsource/m-plus-1-code/latin-400.css';
+@import '@fontsource/m-plus-1-code/latin-500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-base font-sans text-fg antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+  ::selection {
+    background: rgba(93, 228, 204, 0.28);
+    color: #eef3f2;
+  }
+  :focus-visible {
+    outline: 2px solid #5de4cc;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[11.5px] uppercase tracking-label text-fg-subtle;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6;
+  }
+  .card {
+    @apply rounded-card border border-line bg-surface transition-[border-color,transform,background-color] duration-300;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-5 py-3 text-[15px] font-medium transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply bg-accent text-accent-ink hover:bg-[#7DEBD7];
+  }
+  .btn-ghost {
+    @apply border border-line text-fg hover:border-accent/50 hover:bg-elevated;
+  }
+  .btn-arrow {
+    @apply transition-transform duration-200 group-hover:translate-x-1;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-md border border-line px-2.5 py-1 font-mono text-[11.5px] tracking-[0.04em] text-fg-muted transition-colors duration-200 hover:border-accent/60 hover:text-fg;
+  }
+}
